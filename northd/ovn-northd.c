@@ -11539,8 +11539,8 @@ build_lrouter_nat_defrag_and_lb(struct ovn_datapath *od,
             * does not have any feature that depends on the source
             * ip address being external IP address for IP routing,
             * we can do it here, saving a future re-circulation. */
-            ovn_lflow_add(lflows, od, S_ROUTER_IN_DNAT, 50,
-                          "ip", "flags.loopback = 1; ct_dnat;");
+            //ovn_lflow_add(lflows, od, S_ROUTER_IN_DNAT, 50,
+            //              "ip", "flags.loopback = 1; ct_dnat;");
         }
 
         /* Load balancing and packet defrag are only valid on
